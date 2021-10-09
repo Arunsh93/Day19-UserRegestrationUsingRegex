@@ -7,10 +7,11 @@ namespace RegexPracticeProblems
 {
     class UserRegestration
     {
-        public string RegexLastName = "^[A-Za-z]{1}[a-z]{2}";
-        public bool ValidateFirstName(string LastName)
+        public string RegexEmailId = "^abc.[A-Za-z1-9]*@bl.co.[a-z]*$";
+
+        public bool ValidateEmail(string EmailId)
         {
-            return Regex.IsMatch(LastName, RegexLastName);
+            return Regex.IsMatch(EmailId, RegexEmailId);
         }
     }
 }

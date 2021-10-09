@@ -8,17 +8,17 @@ namespace RegexPracticeProblems
         {
             Console.WriteLine("******Welcome to User Regestration******");
             UserRegestration user = new UserRegestration();
-            Console.Write("Enter Last Name: ");
-            string lastName = Console.ReadLine();
-            bool result = user.ValidateFirstName(lastName);
+            Console.Write("Enter Email: ");
+            string userEmailId = Console.ReadLine();
+            bool result = user.ValidateEmail(userEmailId);
 
             if(result == true)
             {
-                Console.WriteLine("Valid Name!");
+                Console.WriteLine("Valid EmailId!");
             }
             else
             {
-                Console.WriteLine("Invalid Name!");
+                Console.WriteLine("Invalid EmailId!");
             }
         }
     }
