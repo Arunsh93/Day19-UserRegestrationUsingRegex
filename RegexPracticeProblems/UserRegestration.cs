@@ -9,7 +9,7 @@ namespace RegexPracticeProblems
     {
         public string RegexEmailId = "^abc.[A-Za-z1-9]*@bl.co.[a-z]*$";
         public string RegexPhoneNumber = "^[0-9]{2}[ ][0-9]{10}$";
-        public string RegexPassword = "^(?=.*[A-Z])[A-Za-z0-9.@!#$&]{8,}$";
+        public string RegexPassword = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9.@!#$&]{8,}$";
 
         public bool ValidateEmail(string EmailId)
         {
