@@ -8,7 +8,7 @@ namespace RegexPracticeProblems
         {
             Console.WriteLine("******Welcome to User Regestration******");
             UserRegestration user = new UserRegestration();
-            Console.Write("Enter Password: ");
+            Console.Write("Enter Password:Atleast one Uppercase letter: ");
             string userPassword = Console.ReadLine();
             //bool result = user.ValidateEmail(userEmailId);
             //bool result = user.ValidatePhoneNumber(userPhoneNumber);
