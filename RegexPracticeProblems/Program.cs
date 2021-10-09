@@ -8,18 +8,19 @@ namespace RegexPracticeProblems
         {
             Console.WriteLine("******Welcome to User Regestration******");
             UserRegestration user = new UserRegestration();
-            Console.Write("Enter Phone Number: ");
-            string userPhoneNumber = Console.ReadLine();
+            Console.Write("Enter Password: ");
+            string userPassword = Console.ReadLine();
             //bool result = user.ValidateEmail(userEmailId);
-            bool result = user.ValidatePhoneNumber(userPhoneNumber);
+            //bool result = user.ValidatePhoneNumber(userPhoneNumber);
+            bool result = user.ValidatePassword(userPassword);
 
             if(result == true)
             {
-                Console.WriteLine("Valid EmailId!");
+                Console.WriteLine("Valid Password!");
             }
             else
             {
-                Console.WriteLine("Invalid EmailId!");
+                Console.WriteLine("Invalid Password! Password contain atleast 8 characters.");
             }
         }
     }
