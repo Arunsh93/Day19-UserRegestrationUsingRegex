@@ -8,20 +8,15 @@ namespace RegexPracticeProblems
         {
             Console.WriteLine("******Welcome to User Regestration******");
             UserRegestration user = new UserRegestration();
-            Console.Write("Enter Password:Atleast one Uppercase letter: ");
-            string userPassword = Console.ReadLine();
-            //bool result = user.ValidateEmail(userEmailId);
-            //bool result = user.ValidatePhoneNumber(userPhoneNumber);
-            bool result = user.ValidatePassword(userPassword);
-
-            if(result == true)
-            {
-                Console.WriteLine("Valid Password!");
-            }
-            else
-            {
-                Console.WriteLine("Invalid Password! Password contain atleast 8 characters.");
-            }
+            user.ValidateEmail("abc@yahoo.com");
+            user.ValidateEmail("abc-100@yahoo.com");
+            user.ValidateEmail("abc.100@yahoo.com");
+            user.ValidateEmail("abc111@abc.com");
+            user.ValidateEmail("abc-100@abc.net");
+            user.ValidateEmail("abc.100@abc.com.au");
+            user.ValidateEmail("abc@1.com");
+            user.ValidateEmail("abc@gmail.com.com");
+            user.ValidateEmail("abc+100@gmail.com");
         }
     }
 }

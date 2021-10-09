@@ -8,23 +8,19 @@ namespace RegexPracticeProblems
 {
     class UserRegestration
     {
-        public string RegexEmailId = "^abc.[A-Za-z1-9]*@bl.co.[a-z]*$";
-        public string RegexPhoneNumber = "^[0-9]{2}[ ][0-9]{10}$";
-        public string RegexPassword = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#$&])[A-Za-z0-9.@!#$&]{8,}$";
+        public string RegexEmailId = "^[A-Za-z0-9]+([-.+][0-9]+)?[0-9]*[@][A-Za-z0-9]+[.][a-zA-Z]{2,}([.][a-z]{2,})?$";
 
-        public bool ValidateEmail(string EmailId)
-        {
-            return Regex.IsMatch(EmailId, RegexEmailId);
-        }
 
-        public bool ValidatePhoneNumber(string phoneNumber)
+        public void ValidateEmail(string EmailId)
         {
-            return Regex.IsMatch(phoneNumber, RegexPhoneNumber);
-        }
-
-        public bool ValidatePassword(string password)
-        {
-            return Regex.IsMatch(password, RegexPassword);
+            if (Regex.IsMatch(EmailId, RegexEmailId))
+            {
+                Console.WriteLine(EmailId + " Valid EmailId!");
+            }
+            else
+            {
+                Console.WriteLine(EmailId + " Invalid EmailId!");
+            }
         }
     }
 }
