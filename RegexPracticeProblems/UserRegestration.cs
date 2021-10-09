@@ -7,10 +7,10 @@ namespace RegexPracticeProblems
 {
     class UserRegestration
     {
-        public string RegexFirstName = "[A-Z]{1}[a-z]{2}";
-        public bool ValidateFirstName(string firstName)
+        public string RegexLastName = "^[A-Za-z]{1}[a-z]{2}";
+        public bool ValidateFirstName(string LastName)
         {
-            return Regex.IsMatch(firstName, RegexFirstName);
+            return Regex.IsMatch(LastName, RegexLastName);
         }
     }
 }
